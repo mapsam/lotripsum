@@ -13,13 +13,16 @@
 <div id="wrap">
 
 <nav>
-<form id="form" name="form" onsubmit="generate();">
-<input name="frodo" id="frodo" type="number"></input>
-<input id="button" type="submit" value="Submit"></input>
+<h1>LotrIpsum</h1>
+<h2>Filler text straight from Middle-Earth</h2>
+<form id="form" name="form">
+<input id="add" type="submit" value="Add a Lotripsum"></input>
+<input id="removeSingle" type="submit" value="Remove One"></input>
+<input id="removeAll" type="submit" value="Remove All"></input>
 </form>
 </nav>
 
-<section id="text"><section>
+<section id="text"></section>
 
 </div>
 

@@ -13,13 +13,40 @@ nav {
 	top:0;
 	margin:0 0 20px 0;
 }
+nav h1 {
+	font-family:arial, sans-serif;
+	font-size:1.7em;
+	color:#000;
+	margin-bottom:5px;
+}
+nav h2 {
+	font-family:arial, sans-serif;
+	font-size:0.8em;
+	color:#555;
+	font-weight:100;
+	text-transform:uppercase;
+	margin-bottom:10px;
+	letter-spacing:1px;
+	margin-bottom:10px;
+
+}
+#frodo {
+	padding:6px;
+	background-color:#e5e5e5;
+	width:50px;
+}
 section {
 	position:relative;
 	width:100%;
 }
-section p {
+
+#text p {
 	font-family:arial, sans-serif;
 	font-size:0.9em;
-	font-color:#333;
+	color:#333;
+	margin-bottom:15px;
+	text-transform:title;
+}
+#text br {
 	margin-bottom:15px;
 }
