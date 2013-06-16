@@ -1,0 +1,25 @@
+*, html, body, h1, h2, h3, p {
+	margin:0;
+	padding:0;
+}
+#wrap {
+	display:block;
+	margin:20px auto;
+	width:900px;
+}
+nav {
+	width:100%;
+	position:relative;
+	top:0;
+	margin:0 0 20px 0;
+}
+section {
+	position:relative;
+	width:100%;
+}
+section p {
+	font-family:arial, sans-serif;
+	font-size:0.9em;
+	font-color:#333;
+	margin-bottom:15px;
+}

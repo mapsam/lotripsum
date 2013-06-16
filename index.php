@@ -10,15 +10,22 @@
 	<![endif]-->
 </head>
 <body>
+<div id="wrap">
 
+<nav>
 <form id="form" name="form" onsubmit="generate();">
 <input name="frodo" id="frodo" type="number"></input>
 <input id="button" type="submit" value="Submit"></input>
 </form>
+</nav>
 
 <section id="text"><section>
 
+</div>
+
+<script src="lists.js"></script>
 <script src="main.js"></script>
+
 
 </body>
 </html>
