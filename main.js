@@ -17,6 +17,7 @@ $('#removeAll').click(function(){
 	return false;
 });
 
+//prepare the entire paragraph
 function generate() {
 	var lotrLength = lotr.length,
 		ipsumLength = ipsum.length,
@@ -68,12 +69,12 @@ function generate() {
 		}
 		sentence = null;
 	}
-	paragraph = "<p>"+paragraph+"</p>";
-	$('#text').append(paragraph);
-	paragraph = null;
+	paragraph = "<p>"+paragraph+"</p>"; //attach the <p> tags for styling
+	$('#text').append(paragraph); //append the paragraph to the specific id
+	paragraph = null; //rever to null so the paragraph doesn't concatenate
 }
 
-window.onLoad = generate();
+window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
 
 
 
