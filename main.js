@@ -19,7 +19,7 @@ $('#removeAll').click(function(){
 
 //prepare the entire paragraph
 function generate() {
-	var lotrLength = lotr.length,
+	var lotrLength = lotr.length, 
 		ipsumLength = ipsum.length,
 		paragraph, sentence, lotrBrick, ipsumBrick = null,
 		ipsumBrickLength = Math.round(Math.random()*(2-1)+1);
@@ -29,6 +29,7 @@ function generate() {
 		//create sentence
 		sentence = null;
 		sentenceBricks = Math.round(Math.random()*(3-1)+1);
+		//console.log("sentence bricks: ", sentenceBricks);
 		for(s=0; s<sentenceBricks; s++){
 			//create a single lotr brick
 			lotrBrick = null;
@@ -37,9 +38,11 @@ function generate() {
 				lotrSingle = Math.round(Math.random()*lotrLength)
 				if(lotrBrick == null) {
 					lotrBrick = lotr[lotrSingle];
+					
 				} else {
 					lotrBrick = lotrBrick + ' ' + lotr[lotrSingle];
-				}
+				} 
+				//console.log(lotrBrick);
 			}
 			//add single lotr brick to sentence
 			if(sentence == null){
@@ -48,17 +51,22 @@ function generate() {
 				sentence = sentence + ' ' + lotrBrick;
 			}
 			lotrBrick = null;
+			
 			//create a single ipsum brick
 			for(i=0; i<=ipsumBrickLength; i++){
 				ipsumSingle = Math.round(Math.random()*ipsumLength)
+				
 				if(ipsumBrick == null){
 					ipsumBrick = ipsum[ipsumSingle];
 				} else {
 					ipsumBrick = ipsumBrick + ' ' + ipsum[ipsumSingle];
 				}
+				
 			}
 			//add single ipsum brick to the sentence
+			
 			sentence = sentence + ' ' + ipsumBrick;
+			
 			ipsumBrick = null;
 		}
 		sentence = sentence + '.'
