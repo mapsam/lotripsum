@@ -50,7 +50,7 @@ function generate() {
 				sentence = sentence + ' ' + lotrBrick;
 			}
 			lotrBrick = null;
-			console.log(sentence);
+			
 			//create a single ipsum brick
 			for(i=0; i<=ipsumBrickLength; i++){
 				ipsumSingle = Math.round(Math.random()*ipsumLength)
@@ -63,9 +63,9 @@ function generate() {
 				
 			}
 			//add single ipsum brick to the sentence
-			console.log("ipsum brick: ", ipsumBrick);
+			
 			sentence = sentence + ' ' + ipsumBrick;
-			console.log("sentence: ", sentence);
+			
 			ipsumBrick = null;
 		}
 		sentence = sentence + '.'
