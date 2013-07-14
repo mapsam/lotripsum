@@ -64,12 +64,12 @@ function generate() {
 				
 			}
 			//add single ipsum brick to the sentence
-			
 			sentence = sentence + ' ' + ipsumBrick;
 			
 			ipsumBrick = null;
 		}
-		sentence = sentence + '.'
+		sentence = sentence.charAt(0).toUpperCase() + sentence.slice(1); //uppercase first letter of sentence and add rest of sentence after first character
+		sentence = sentence + '.' //put a period at the end of the sentence
 		if(paragraph == null){
 			paragraph = sentence;
 		} else {

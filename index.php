@@ -13,7 +13,7 @@
 <div id="wrap">
 
 <nav>
-<h1>LotrIpsum</h1>
+<h1>LOTR Ipsum</h1>
 <h2>Filler text straight from Middle-Earth</h2>
 <form id="form" name="form">
 <input id="add" type="submit" value="Add a Lotripsum"></input>

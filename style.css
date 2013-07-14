@@ -1,6 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Boogaloo);
+@import url(http://fonts.googleapis.com/css?family=Emilys+Candy);
 *, html, body, h1, h2, h3, p {
 	margin:0;
 	padding:0;
+}
+body {
+	background: url(images/ring.png) center 50px no-repeat;
 }
 #wrap {
 	display:block;
@@ -14,21 +19,19 @@ nav {
 	margin:0 0 20px 0;
 }
 nav h1 {
-	font-family:arial, sans-serif;
-	font-size:1.7em;
+	font-family: 'Boogaloo', cursive;
+	font-size:2.5em;
 	color:#000;
 	margin-bottom:5px;
 }
 nav h2 {
-	font-family:arial, sans-serif;
-	font-size:0.8em;
+	font-family: 'Emilys Candy', cursive;
+	font-size:1.0em;
 	color:#555;
 	font-weight:100;
-	text-transform:uppercase;
 	margin-bottom:10px;
 	letter-spacing:1px;
 	margin-bottom:10px;
-
 }
 #frodo {
 	padding:6px;
