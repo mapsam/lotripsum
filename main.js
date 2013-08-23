@@ -4,6 +4,14 @@ $('#add').click(function(){
 	generate();
 	return false;
 });
+$('#add-ul').click(function(){
+	uList();
+	return false;
+});
+$('#add-ol').click(function(){
+	oList();
+	return false;
+});
 //remove single paragraph button
 $('#removeSingle').click(function(){
 	$('#text p').last().remove();
@@ -14,6 +22,10 @@ $('#removeAll').click(function(){
 	$('#text').empty();
 	var comment = '<p>The salted pork is particularly good.</p>';
 	$('#text').append(comment);
+	return false;
+});
+$('#raw').click(function(){
+	raw();
 	return false;
 });
 
@@ -80,6 +92,53 @@ function generate() {
 	paragraph = "<p>"+paragraph+"</p>"; //attach the <p> tags for styling
 	$('#text').append(paragraph); //append the paragraph to the specific id
 	paragraph = null; //rever to null so the paragraph doesn't concatenate
+}
+
+function uList() {
+	var lotrLength = lotr.length, 
+		listBrick = null,
+
+	listBrickLength = Math.round(Math.random()*(7-1)+1);
+	for(i=0; i<=listBrickLength; i++){
+		var lotrSingle = Math.round(Math.random()*lotrLength)
+		if(listBrick == null) {
+			listBrick = '<li>' + lotr[lotrSingle] + '</li>';
+			
+		} else {
+			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
+		} 
+		console.log(listBrick);
+
+	}
+
+	listBrick = '<ul>' + listBrick + '</ul>';
+	$('#text').append(listBrick);
+
+}
+function oList() {
+	var lotrLength = lotr.length, 
+		listBrick = null,
+
+	listBrickLength = Math.round(Math.random()*(7-1)+1);
+	for(i=0; i<=listBrickLength; i++){
+		var lotrSingle = Math.round(Math.random()*lotrLength)
+		if(listBrick == null) {
+			listBrick = '<li>' + lotr[lotrSingle] + '</li>';
+			
+		} else {
+			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
+		} 
+		console.log(listBrick);
+
+	}
+
+	listBrick = '<ol>' + listBrick + '</ol>';
+	$('#text').append(listBrick);
+
+}
+
+function raw() {
+	$('#text').nextAll('p').prepend('&#60;p&#62;');
 }
 
 window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
