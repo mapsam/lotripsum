@@ -3,15 +3,26 @@
 	padding:0;
 }
 body {
-	background: url(images/ring.png) center 50px no-repeat;
+	background: url(images/gandalf.png) top center no-repeat fixed;
+	-webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover;
 	font-family:arial, sans-serif;
 }
-#top {
-	display:block;
-	width:100%;
-	margin:auto;
-	padding:10px 0 5px;
-	background-color:#e5e5e5;
+#sidebar {
+	position:absolute;
+	height:100%;
+	width:300px;
+	padding:15px;
+	background-color:rgba(0,0,0,0.6);
+	border-right:;
+}
+#main {
+	position:absolute;
+	margin:15px;
+	left:330px;
+	width:630px;
 }
 .wrap {
 	display:block;
@@ -27,13 +38,13 @@ nav {
 nav h1 {
 	font-family: arial;
 	font-size:2.5em;
-	color:#000;
+	color:#c0c0c0;
 	margin-bottom:5px;
 }
 nav h2 {
 	font-family: arial;
 	font-size:1.0em;
-	color:#555;
+	color:#e5e5e5;
 	font-weight:100;
 	margin-bottom:10px;
 	letter-spacing:1px;
@@ -43,6 +54,7 @@ form p {
 	margin-bottom:5px;
 	font-size:0.8;
 	font-weight:bold;
+	color:#fff;
 }
 button {
 	padding:5px 6px;
@@ -51,6 +63,8 @@ button {
 	border-radius:3px;
 	border:1px #444 solid;
 	background-color:#fff;
+	display:inline-block;
+	margin-bottom:3px;
 }
 button:hover {
 	background-color:#eeeeee;
@@ -71,8 +85,8 @@ section {
 }
 #text {
 	font-family:arial, sans-serif;
-	font-size:1.0em;
-	color:#333;
+	font-size:0.9em;
+	color:#eee;
 }
 #text p {
 	margin-bottom:15px;
@@ -85,7 +99,7 @@ section {
 	margin:20px 0 20px 40px;
 }
 #text ul li, #text ol li {
-	margin-bottom:5px;
+	margin-bottom:0px;
 }
 input {
 	padding:3px 4px;

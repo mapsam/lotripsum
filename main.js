@@ -14,7 +14,9 @@ $('#add-ol').click(function(){
 });
 //remove single paragraph button
 $('#removeSingle').click(function(){
-	$('#text p').last().remove();
+	//var last = $('#text :last');
+	//console.log(String(last));
+	$('#text :last').remove();
 	return false;
 });
 //remove it all and add a funny line
@@ -107,7 +109,6 @@ function uList() {
 		} else {
 			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
 		} 
-		console.log(listBrick);
 
 	}
 
@@ -128,7 +129,6 @@ function oList() {
 		} else {
 			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
 		} 
-		console.log(listBrick);
 
 	}
 
