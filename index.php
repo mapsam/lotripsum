@@ -21,7 +21,8 @@
 		<button id="add-ol" type="submit" value="Ordered List">Ordered List</button></p>
 		<p>Remove:<br>
 		<button id="removeSingle" type="submit" value="Remove Last">Remove Last</button>
-		<button id="removeAll" type="submit" value="Remove All">Remove All</button></p>
+		<button id="removeAll" type="submit" value="Remove All">Remove All</button><br>
+		<button id="html-button" type="submit" value="HTML Tag Toggle">Add &lt;html&gt;</button></p>
 		<!-- <button id="raw" type="submit" value="Remove All">< ></button></p> -->
 		</form>
 	</nav>

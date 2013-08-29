@@ -79,6 +79,15 @@ button:active {
 	background-color:#e5e5e5;
 	width:50px;
 }
+#html-button {
+	background-color:#A4DDED;
+}
+#html-button:hover {
+	background-color:#87CEEB;
+}
+#html-button:active {
+	background-color:#00BFFF;
+}
 section {
 	position:relative;
 	width:100%;

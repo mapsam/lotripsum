@@ -12,11 +12,9 @@ $('#add-ol').click(function(){
 	oList();
 	return false;
 });
-//remove single paragraph button
+//remove last element button
 $('#removeSingle').click(function(){
-	//var last = $('#text :last');
-	//console.log(String(last));
-	$('#text :last').remove();
+	$('.lotripsum:last').remove();
 	return false;
 });
 //remove it all and add a funny line
@@ -28,6 +26,20 @@ $('#removeAll').click(function(){
 });
 $('#raw').click(function(){
 	raw();
+	return false;
+});
+//HTML tag button
+var tags = false; //determins if 'add' or 'removal' is appropriate
+$('#html-button').click(function(){
+	if(tags == false){
+		addHTML();
+		tags = true;
+		$('#html-button').text('Remove <html>');
+	} else {
+		removeHTML();
+		tags = false;
+		$('#html-button').text('Add <html>');
+	}
 	return false;
 });
 
@@ -91,7 +103,7 @@ function generate() {
 		}
 		sentence = null;
 	}
-	paragraph = "<p>"+paragraph+"</p>"; //attach the <p> tags for styling
+	paragraph = "<p class='lotripsum'>"+paragraph+"</p>"; //attach the <p> tags for styling
 	$('#text').append(paragraph); //append the paragraph to the specific id
 	paragraph = null; //rever to null so the paragraph doesn't concatenate
 }
@@ -112,10 +124,10 @@ function uList() {
 
 	}
 
-	listBrick = '<ul>' + listBrick + '</ul>';
+	listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
 	$('#text').append(listBrick);
-
 }
+
 function oList() {
 	var lotrLength = lotr.length, 
 		listBrick = null,
@@ -132,13 +144,22 @@ function oList() {
 
 	}
 
-	listBrick = '<ol>' + listBrick + '</ol>';
+	listBrick = '<ol class="lotripsum">' + listBrick + '</ol>';
 	$('#text').append(listBrick);
-
 }
 
-function raw() {
-	$('#text').nextAll('p').prepend('&#60;p&#62;');
+function addHTML() {
+	$('#text h1').prepend('<span class="html">&lt;h1&gt;</span>').append('<span class="html">&lt;/h1&gt;</span>');
+	$('#text p').prepend('<span class="html">&lt;p&gt;</span>').append('<span class="html">&lt;/p&gt;</span>');
+	$('#text a, #content p a').prepend('<span class="html">&lt;a href=""&gt;</span>').append('<span class="html">&lt;/a&gt;</span>');
+	$('#text ul').prepend('<span class="html">&lt;ul&gt;</span>').append('<span class="html">&lt;/ul&gt;</span>');
+	$('#text ul li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
+	$('#text ol').prepend('<span class="html">&lt;ol&gt;</span>').append('<span class="html">&lt;/ol&gt;</span>');
+	$('#text ol li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
+}
+
+function removeHTML() {
+	$('.html').remove();
 }
 
 window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
