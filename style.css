@@ -3,6 +3,7 @@
 	padding:0;
 }
 body {
+<<<<<<< HEAD
 	background: url(images/gandalf.png) top center no-repeat fixed;
 	-webkit-background-size: cover; 
     -moz-background-size: cover; 
@@ -23,6 +24,15 @@ body {
 	margin:15px;
 	left:330px;
 	width:630px;
+	background: url(images/ring.png) center 50px no-repeat;
+	font-family:arial, sans-serif;
+}
+#top {
+	display:block;
+	width:100%;
+	margin:auto;
+	padding:10px 0 5px;
+	background-color:#e5e5e5;
 }
 .wrap {
 	display:block;

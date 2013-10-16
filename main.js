@@ -109,25 +109,24 @@ function generate() {
 }
 
 function uList() {
-	var lotrLength = lotr.length, 
-		listBrick = null,
+    var lotrLength = lotr.length, 
+        listBrick = null,
 
-	listBrickLength = Math.round(Math.random()*(7-1)+1);
-	for(i=0; i<=listBrickLength; i++){
-		var lotrSingle = Math.round(Math.random()*lotrLength)
-		if(listBrick == null) {
-			listBrick = '<li>' + lotr[lotrSingle] + '</li>';
-			
-		} else {
-			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
-		} 
+    listBrickLength = Math.round(Math.random()*(7-1)+1);
+    for(i=0; i<=listBrickLength; i++){
+        var lotrSingle = Math.round(Math.random()*lotrLength)
+        if(listBrick == null) {
+            listBrick = '<li>' + lotr[lotrSingle] + '</li>';
+                
+        } else {
+            listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
+        } 
 
-	}
+    }
 
-	listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
-	$('#text').append(listBrick);
+    listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
+    $('#text').append(listBrick);
 }
-
 function oList() {
 	var lotrLength = lotr.length, 
 		listBrick = null,
@@ -141,6 +140,7 @@ function oList() {
 		} else {
 			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
 		} 
+<<<<<<< HEAD
 
 	}
 
@@ -149,18 +149,19 @@ function oList() {
 }
 
 function addHTML() {
-	$('#text h1').prepend('<span class="html">&lt;h1&gt;</span>').append('<span class="html">&lt;/h1&gt;</span>');
-	$('#text p').prepend('<span class="html">&lt;p&gt;</span>').append('<span class="html">&lt;/p&gt;</span>');
-	$('#text a, #content p a').prepend('<span class="html">&lt;a href=""&gt;</span>').append('<span class="html">&lt;/a&gt;</span>');
-	$('#text ul').prepend('<span class="html">&lt;ul&gt;</span>').append('<span class="html">&lt;/ul&gt;</span>');
-	$('#text ul li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
-	$('#text ol').prepend('<span class="html">&lt;ol&gt;</span>').append('<span class="html">&lt;/ol&gt;</span>');
-	$('#text ol li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
+    $('#text h1').prepend('<span class="html">&lt;h1&gt;</span>').append('<span class="html">&lt;/h1&gt;</span>');
+    $('#text p').prepend('<span class="html">&lt;p&gt;</span>').append('<span class="html">&lt;/p&gt;</span>');
+    $('#text a, #content p a').prepend('<span class="html">&lt;a href=""&gt;</span>').append('<span class="html">&lt;/a&gt;</span>');
+    $('#text ul').prepend('<span class="html">&lt;ul&gt;</span>').append('<span class="html">&lt;/ul&gt;</span>');
+    $('#text ul li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
+    $('#text ol').prepend('<span class="html">&lt;ol&gt;</span>').append('<span class="html">&lt;/ol&gt;</span>');
+    $('#text ol li').prepend('<span class="html">&lt;li&gt;</span>').append('<span class="html">&lt;/li&gt;</span>');
 }
 
 function removeHTML() {
-	$('.html').remove();
+    $('.html').remove();
 }
+
 
 window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
 
