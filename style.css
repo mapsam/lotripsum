@@ -20,12 +20,9 @@ body {
 	background:#ffffff;
 }
 #main {
-	position:absolute;
-	margin:15px;
-	left:330px;
-	width:630px;
-	background: url(images/ring.png) center 50px no-repeat;
-	font-family:arial, sans-serif;
+	margin:0;
+	max-width:700px;
+	padding:80px 0;
 }
 #nav .left {
 	float:left;

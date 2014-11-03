@@ -108,25 +108,6 @@ function generate() {
 }
 
 function uList() {
-<<<<<<< HEAD
-    var lotrLength = lotr.length, 
-        listBrick = null,
-
-    listBrickLength = Math.round(Math.random()*(7-1)+1);
-    for(i=0; i<=listBrickLength; i++){
-        var lotrSingle = Math.round(Math.random()*lotrLength)
-        if(listBrick == null) {
-            listBrick = '<li>' + lotr[lotrSingle] + '</li>';
-                
-        } else {
-            listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
-        } 
-
-    }
-
-    listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
-    $('#text').append(listBrick);
-=======
 	var lotrLength = lotr.length, 
 		listBrick = null,
 
@@ -145,8 +126,8 @@ function uList() {
 	listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
 	$('#text').append(listBrick);
 	window.scrollTo(0,document.body.scrollHeight);
->>>>>>> master
 }
+
 function oList() {
 	var lotrLength = lotr.length, 
 		listBrick = null,
@@ -160,8 +141,6 @@ function oList() {
 		} else {
 			listBrick = listBrick + '<li>' + lotr[lotrSingle] + '</li>';
 		} 
-<<<<<<< HEAD
-
 	}
 
 	listBrick = '<ol class="lotripsum">' + listBrick + '</ol>';
@@ -183,10 +162,6 @@ function removeHTML() {
     $('.html').remove();
 }
 
-<<<<<<< HEAD
-
-window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
-=======
 // select text for highlight
 function selectText(containerid) {
   if (document.selection) {
@@ -206,11 +181,4 @@ function loadThree() {
 	generate();
 }
 
-window.onLoad = loadThree(); //do this right away so the page starts with a paragraph instead of empty
->>>>>>> master
-
-
-
-
-
-
+window.onLoad = loadThree(); //do this right away so the page starts with three paragraphs instead of empty page
