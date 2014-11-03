@@ -20,8 +20,6 @@ $('#removeSingle').click(function(){
 //remove it all and add a funny line
 $('#removeAll').click(function(){
 	$('#text').empty();
-	var comment = '<p>The salted pork is particularly good.</p>';
-	$('#text').append(comment);
 	return false;
 });
 $('#raw').click(function(){
@@ -105,7 +103,8 @@ function generate() {
 	}
 	paragraph = "<p class='lotripsum'>"+paragraph+"</p>"; //attach the <p> tags for styling
 	$('#text').append(paragraph); //append the paragraph to the specific id
-	paragraph = null; //rever to null so the paragraph doesn't concatenate
+	paragraph = null; //revert to null so the paragraph doesn't concatenate
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
 function uList() {
@@ -126,6 +125,7 @@ function uList() {
 
 	listBrick = '<ul class="lotripsum">' + listBrick + '</ul>';
 	$('#text').append(listBrick);
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
 function oList() {
@@ -146,6 +146,7 @@ function oList() {
 
 	listBrick = '<ol class="lotripsum">' + listBrick + '</ol>';
 	$('#text').append(listBrick);
+	window.scrollTo(0,document.body.scrollHeight);
 }
 
 function addHTML() {
@@ -162,7 +163,26 @@ function removeHTML() {
 	$('.html').remove();
 }
 
-window.onLoad = generate(); //do this right away so the page starts with a paragraph instead of empty
+// select text for highlight
+function selectText(containerid) {
+  if (document.selection) {
+    var range = document.body.createTextRange();
+    range.moveToElementText(document.getElementById(containerid));
+    range.select();
+  } else if (window.getSelection) {
+    var range = document.createRange();
+    range.selectNode(document.getElementById(containerid));
+    window.getSelection().addRange(range);
+  }
+}
+
+function loadThree() {
+	generate();
+	generate();
+	generate();
+}
+
+window.onLoad = loadThree(); //do this right away so the page starts with a paragraph instead of empty
 
 
 
